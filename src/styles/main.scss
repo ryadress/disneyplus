@@ -1,31 +1,144 @@
 $cordeFundo:black;
-$textColor:white;
+$cordoTexto:white;
+$cordoBottun:rgb(8, 56, 232);
 
 *{
-    padding: 0;
     margin: 0;
-    box-sizing: border-box;
-};
-
-body {
-    background-color: $cordeFundo;
+    padding: 0;
 }
 
-.movie{
-    display:block;
-    padding-top: 5px;
-    justify-content: center;
-    box-sizing: border-box;
-    padding: 30px;
+body{
+    background-color: $cordeFundo;
+    color: $cordoTexto;
 }
 
 .logo{
-    width: 15%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
 }
 
-p {
-    color: $textColor;
-    padding: 15px;
-    padding-bottom: 5px;
+.button{
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    position: absolute;
+    top:10px;
+    right: 10px;
+    background-color: $cordoBottun;
+    color:$cordoTexto;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cont {
+    max-width: 60%;
+    font-size: 15px;
+}
+
+.cont p:last-child {
+    margin-bottom: 0;
+}
+
+
+p {
+    margin: 0px 0 15px  0px;
+    padding: 0;
+    text-align: justify;
+    position: static;
+    max-width: 90%;
+}
+
+.movie{
+    max-width: 40%;
+    height: auto;
+    margin-right: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+header {
+    background-color: $cordoBottun;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        height: auto; 
+    }
+
+    .cont, .movie {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .movie {
+        margin-bottom: 20px; 
+        margin-top: 50px;
+    }
+
+    .button {
+        top: 5px;
+        right: 5px;
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .logo {
+        top: 5px;
+        left: 5px;
+        height: 40px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center; 
+        padding: 10px; 
+    }
+
+    .cont, .movie {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .movie {
+        width: 100%; 
+        max-width: 100%;
+        margin-bottom: 20px; 
+        margin-top: 50px;
+    }
+
+    .cont {
+        font-size: 14px;
+    }
+
+    .button {
+        top: 5px;
+        right: 5px;
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .logo {
+        top: 5px;
+        left: 5px;
+        height: 30px;
+    }
+}
+
 
